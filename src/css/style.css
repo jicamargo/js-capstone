@@ -53,15 +53,30 @@ h1 {
 
 
 .main-container {
-  display: flex;
   padding: 1rem;
   margin: auto;
-  border-radius: 8px;
-  background-color: var(--tertiary-color);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-  gap: 20px;
+  background-color: var(--primary-color);
 }
 
 ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.li-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--tertiary-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
