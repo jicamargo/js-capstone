@@ -1,5 +1,5 @@
 import showCards from './showcards.js';
-import addHeader from './addheader.js';
+import addHeader from './addHeader.js';
 import addFooter from './addFooter.js';
 
 
