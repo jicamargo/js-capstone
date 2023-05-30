@@ -203,7 +203,7 @@ You can follow the next steps to review the code or to run the project locally:
 ### 👥 Authors <a name="authors"></a>
 
 
--👤 **Fortune **
+-👤 **Fortune**
 
 - GitHub: [@Braingenius2](https://github.com/Braingenius2)
 
