@@ -1,29 +1,25 @@
 /* *************** variables and general settings ************** */
 :root {
---primary-color: #fcfcfc;
---secondary-color: #f7567c;
---tertiary-color: #fffae3;
---font-color: #99e1d9;
---font-color-secondary: #5d576b;
---font-family-titles: 'Lato', sans-serif;
+  --primary-color: #fcfcfc;
+  --secondary-color: #f7567c;
+  --tertiary-color: #fffae3;
+  --font-color: #99e1d9;
+  --font-color-secondary: #5d576b;
+  --font-family-titles: 'Lato', sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}  
+}
 
 html {
   scroll-behavior: smooth;
-}  
-
-body {
-  font-size: 16px;
-  font-family: var("--font-family-titles");
-}  
+}
 
 /* Reset default browser styles */
+
 body,
 h1,
 h2,
@@ -36,6 +32,8 @@ input {
 }
 
 body {
+  font-size: 16px;
+  font-family: var(--font-family-titles);
   background-color: var(--primary-color);
 }
 
@@ -50,7 +48,6 @@ h1 {
   font-size: 28px;
   font-weight: bold;
 }
-
 
 .main-container {
   padding: 1rem;

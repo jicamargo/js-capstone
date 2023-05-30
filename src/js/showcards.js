@@ -17,13 +17,13 @@ const showCards = async (mainContainer) => {
     ulElement.classList.add('ul-cards');
     newSection.appendChild(ulElement);
 
-    top10Movies.forEach(movie => {
+    top10Movies.forEach((movie) => {
       const liElement = document.createElement('li');
       liElement.classList.add('li-card');
 
       const imageElement = document.createElement('img');
-      imageElement.src = movie.image; // Replace 'image' with the actual property name in your movie object
-      imageElement.addEventListener('click', () => {MovieDetailsPopup(movie)});
+      imageElement.src = movie.image;
+      imageElement.addEventListener('click', () => { MovieDetailsPopup(movie); });
 
       const nameElement = document.createElement('h3');
       nameElement.textContent = movie.name;
@@ -38,7 +38,7 @@ const showCards = async (mainContainer) => {
       ulElement.appendChild(liElement);
     });
   } catch (error) {
-    console.error('An error occurred while showing cards:', error);
+    // console.error('An error occurred while showing cards:', error);
   }
 };
 
