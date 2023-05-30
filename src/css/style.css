@@ -1,0 +1,67 @@
+/* *************** variables and general settings ************** */
+:root {
+--primary-color: #fcfcfc;
+--secondary-color: #f7567c;
+--tertiary-color: #fffae3;
+--font-color: #99e1d9;
+--font-color-secondary: #5d576b;
+--font-family-titles: 'Lato', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
+html {
+  scroll-behavior: smooth;
+}  
+
+body {
+  font-size: 16px;
+  font-family: var("--font-family-titles");
+}  
+
+/* Reset default browser styles */
+body,
+h1,
+h2,
+ul,
+li,
+button,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.main-container {
+  display: flex;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 8px;
+  background-color: var(--tertiary-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+}
