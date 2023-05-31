@@ -88,4 +88,14 @@ button {
   border-radius: 8px;
   padding: 4px;
   margin: 4px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--font-color);
 }
