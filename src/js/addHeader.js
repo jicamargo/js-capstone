@@ -1,10 +1,9 @@
-const addHeader = () => {
-  const pageBody = document.querySelector('body');
-  const headerElement = document.createElement('header');
-  headerElement.classList.add('header');
-  headerElement.innerhtml = `<img src="./images/top-movies-logo.png" alt="top movies logo">`;
+import topMoviesLogo from '../images/top-movies-logo.png';
 
-  pageBody.appendChild(headerElement);
+const addHeader = () => {
+  const headerElement = document.querySelector('header');
+  headerElement.classList.add('header');
+  headerElement.innerHTML = `<img src=${topMoviesLogo} alt="top movies logo>`;
 };
 
 export default addHeader;

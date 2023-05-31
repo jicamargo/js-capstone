@@ -71,7 +71,8 @@ ul {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.footer {
+.footer,
+.header {
   text-align: center;
   padding: 1rem;
   background-color: var(--secondary-color);
