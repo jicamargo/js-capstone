@@ -24,7 +24,7 @@ body.popup-open {
   z-index: 9999;
   max-width: 600px;
   width: 90%;
-  max-height: 90vh; 
+  max-height: 90vh;
   overflow-y: auto;
 }
 
@@ -71,7 +71,7 @@ body.popup-open {
   border-radius: 14px;
   color: var(--third-color);
   font-size: 0.6rem;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 
@@ -85,7 +85,7 @@ body.popup-open {
 /* CSS styles for the summary */
 .summary {
   text-align: justify;
-  max-height: 300px; 
+  max-height: 300px;
   overflow: auto;
   padding: 0.2rem 0.4rem;
   border-top: 2px solid var(--secondary-color);
@@ -103,13 +103,13 @@ body.popup-open {
   max-width: 100%;
   height: auto;
   max-height: 240px;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .comments-title {
   font-size: 0.9rem;
   font-weight: bold;
-  margin: 0.4rem 0; 
+  margin: 0.4rem 0;
   text-align: center;
 }
 
@@ -118,7 +118,7 @@ body.popup-open {
   display: block;
   padding: 0;
   margin: 0;
-} 
+}
 
 .comment-item {
   font-size: 0.8rem;
@@ -130,7 +130,7 @@ body.popup-open {
 .add-your-comment-title {
   font-size: 0.9rem;
   font-weight: bold;
-  margin: 0.4rem 0; 
+  margin: 0.4rem 0;
   text-align: center;
   color: var(--font-color);
 }
@@ -156,10 +156,10 @@ body.popup-open {
     height: auto;
     margin: auto;
   }
-  
+
   .summary {
-    max-height: 200px; 
-    overflow: auto; 
-    padding: 0.4rem ;
+    max-height: 200px;
+    overflow: auto;
+    padding: 0.4rem;
   }
 }

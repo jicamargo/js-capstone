@@ -1,5 +1,4 @@
 const saveComments = (comment) => {
-
   // the parameter comment is an object with the following structure:
   // {
   //   item_id: movie.id,
@@ -8,14 +7,15 @@ const saveComments = (comment) => {
   // }
   // the function saveComments should send this object to the API
 
-  const API_APP_ID = "lwgScw6o5MEbQLNCvzXw"; // Variable to store the API App ID
+  const API_APP_ID = 'lwgScw6o5MEbQLNCvzXw'; // Variable to store the API App ID
   const URL_API = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${API_APP_ID}/`;
-  const url = URL_API + `comments`;
+  const url = `${URL_API}comments`;
 
   // Trim and convert comment to  sentence case
   comment.username = comment.username.trim().toLowerCase();
-  comment.comment = comment.comment.trim()
-  comment.comment = comment.comment.charAt(0).toUpperCase() + comment.comment.slice(1).toLowerCase();
+  comment.comment = comment.comment.trim();
+  comment.comment = comment.comment.charAt(0).toUpperCase()
+                    + comment.comment.slice(1).toLowerCase();
 
   return new Promise((resolve, reject) => {
     fetch(url, {
@@ -25,14 +25,14 @@ const saveComments = (comment) => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then(response => {
+      .then((response) => {
         if (response.status === 201) {
-          resolve(response.json());
+          resolve();
         } else {
-          reject(new Error('Failed to save comments'));
+          reject();
         }
       })
-      .catch(error => {
+      .catch((error) => {
         reject(error);
       });
   });

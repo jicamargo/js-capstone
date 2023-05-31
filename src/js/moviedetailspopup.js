@@ -1,10 +1,9 @@
-import saveComment from "./savecomment.js";
-import getComments from "./getcomments.js";
+import saveComment from './savecomment.js';
+import getComments from './getcomments.js';
 
 const MovieDetailsPopup = async (movie) => {
-  
- // Add class to body to prevent scrolling
- document.body.classList.add('popup-open');
+  // Add class to body to prevent scrolling
+  document.body.classList.add('popup-open');
 
   // Create overlay element
   const overlay = document.createElement('div');
@@ -99,7 +98,7 @@ const MovieDetailsPopup = async (movie) => {
   // Append the overlay to the document body
   document.body.appendChild(overlay);
 
-  //********************  this section is for the comments interaction *******************************
+  //* ***********  this section is for the comments interaction ******************
 
   const commentsContainer = document.createElement('div');
   commentsContainer.classList.add('comments-container');
@@ -107,13 +106,13 @@ const MovieDetailsPopup = async (movie) => {
   const commentstitle = document.createElement('h3');
   commentstitle.classList.add('comments-title');
   commentstitle.textContent = 'Comments';
-  
+
   const commentsUl = document.createElement('ul');
   commentsUl.classList.add('comments-list');
 
   // read the data from the API
   getComments(movie.id)
-  .then(commentsArr => {
+    .then((commentsArr) => {
       commentsArr.forEach((comment) => {
         const commentItem = document.createElement('li');
         commentItem.classList.add('comment-item');
@@ -123,15 +122,8 @@ const MovieDetailsPopup = async (movie) => {
 
       // update the count of comments in the title
       commentstitle.textContent = `Comments (${commentsArr.length})`;
+    });
 
-    })
-  .catch(error => {
-    // Handle error
-    console.log("This movie has no comments");
-  });
-
-   
- 
   const newCommentContainer = document.createElement('div');
   newCommentContainer.classList.add('new-comment-container');
 
@@ -165,37 +157,32 @@ const MovieDetailsPopup = async (movie) => {
     };
 
     saveComment(comment)
-      .then(data => {
-        // Handle success
-        console.log(data);
-      })
-      .catch(error => {
-        // Handle error
-        console.log(error);
-    });
-
-    // clear the input fields
-    yourname.value = '';
-    yourInsights.value = '';
+      .then(() => {
+        // clear the input fields
+        yourname.value = '';
+        yourInsights.value = '';
+      });
 
     // Add the new comment to the comments list
     const commentItem = document.createElement('li');
     commentItem.classList.add('comment-item');
     commentItem.innerHTML = `<strong>${comment.username}</strong>: ${comment.comment}`;
     commentsUl.appendChild(commentItem);
+
+    // update the count of comments in the title
+    commentstitle.textContent = `Comments (${commentsUl.children.length})`;
   });
 
   newCommentContainer.appendChild(commentstitle2);
   newCommentContainer.appendChild(yourname);
   newCommentContainer.appendChild(yourInsights);
   newCommentContainer.appendChild(commentButton);
-  
+
   // Append the elements to the popup
   commentsContainer.appendChild(commentstitle);
   commentsContainer.appendChild(commentsUl);
   commentsContainer.appendChild(newCommentContainer);
   popup.appendChild(commentsContainer);
-
 };
 
 export default MovieDetailsPopup;
