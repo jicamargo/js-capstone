@@ -82,3 +82,10 @@ ul {
 .header img {
   height: 70px;
 }
+
+button {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 4px;
+  margin: 4px;
+}
