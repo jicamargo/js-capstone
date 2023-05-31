@@ -18,7 +18,7 @@ body.popup-open {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--primary-color);
-  padding: 20px;
+  padding: 18px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -28,9 +28,39 @@ body.popup-open {
   overflow-y: auto;
 }
 
-.popup h2 {
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+}
+
+.title-container h2 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+  color: var(--background-color);
+}
+
+/* CSS styles for the close button */
+.close-button {
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  color: var(--font-color);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #f00;
 }
 
 .popup p {
@@ -38,22 +68,18 @@ body.popup-open {
   font-size: 12px;
 }
 
-/* CSS styles for the close button */
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  background-color: transparent;
-  border: none;
-  color: var(--font-color);
-  cursor: pointer;
+.image-summary-container {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-.close-button:hover {
-  color: #f00;
+.image-summary-container img {
+  max-width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
 }
 
 /* CSS styles for the genres list */
@@ -74,7 +100,6 @@ body.popup-open {
   font-weight: bold;
 }
 
-
 /* CSS styles for the details container */
 .details-container {
   display: flex;
@@ -88,22 +113,9 @@ body.popup-open {
   max-height: 300px;
   overflow: auto;
   padding: 0.2rem 0.4rem;
-  border-top: 2px solid var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
+  border-top: 2px solid var(--font-color-secondary);
+  border-bottom: 2px solid var(--font-color-secondary);
   font-size: 1rem;
-}
-
-.image-summary-container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
-.image-summary-container img {
-  max-width: 100%;
-  height: auto;
-  max-height: 240px;
-  object-fit: contain;
 }
 
 .comments-title {

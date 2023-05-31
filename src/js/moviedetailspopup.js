@@ -13,6 +13,9 @@ const MovieDetailsPopup = async (movie) => {
   const container = document.createElement('div');
   container.classList.add('popup-container');
 
+  const titleContainer = document.createElement('div');
+  titleContainer.classList.add('title-container');
+
   // Create a close button
   const closeButton = document.createElement('button');
   closeButton.classList.add('close-button');
@@ -31,6 +34,9 @@ const MovieDetailsPopup = async (movie) => {
   // Create elements to display movie details
   const titleElement = document.createElement('h2');
   titleElement.textContent = movie.name;
+
+  titleContainer.appendChild(titleElement);
+  titleContainer.appendChild(closeButton);
 
   const imageSummaryContainer = document.createElement('div');
   imageSummaryContainer.classList.add('image-summary-container');
@@ -77,8 +83,7 @@ const MovieDetailsPopup = async (movie) => {
   detailsContainer.appendChild(runtimeElement);
 
   // Append the elements to the popup
-  popup.appendChild(closeButton);
-  popup.appendChild(titleElement);
+  popup.appendChild(titleContainer);
   popup.appendChild(imageSummaryContainer);
   popup.appendChild(detailsContainer);
 
