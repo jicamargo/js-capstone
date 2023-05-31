@@ -4,10 +4,9 @@ import addFooter from './addFooter.js';
 
 
 const pageLayout = () => {
-  addHeader();
   const mainContainer = document.querySelector('.main-container');
 
-  
+  addHeader();
   showCards(mainContainer);
   addFooter();
 };
