@@ -78,3 +78,7 @@ ul {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
+
+.header img {
+  height: 70px;
+}
