@@ -1,3 +1,7 @@
+body.popup-open {
+  overflow: hidden;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -18,23 +22,20 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  max-width: 400px;
+  max-width: 600px;
   width: 90%;
+  max-height: 90vh; 
+  overflow-y: auto;
 }
 
 .popup h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.popup img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .popup p {
   margin-bottom: 10px;
+  font-size: 12px;
 }
 
 /* CSS styles for the close button */
@@ -53,4 +54,112 @@
 
 .close-button:hover {
   color: #f00;
+}
+
+/* CSS styles for the genres list */
+.genres-list {
+  display: flex;
+  list-style: none;
+  margin: 0.4rem 0;
+  padding: 0;
+}
+
+.genres-list li {
+  margin-right: 6px;
+  padding: 4px 10px;
+  background-color: var(--secondary-color);
+  border-radius: 14px;
+  color: var(--third-color);
+  font-size: 0.6rem;
+  font-weight: bold; 
+}
+
+
+/* CSS styles for the details container */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.4rem 0;
+}
+
+/* CSS styles for the summary */
+.summary {
+  text-align: justify;
+  max-height: 300px; 
+  overflow: auto;
+  padding: 0.2rem 0.4rem;
+  border-top: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  font-size: 1rem;
+}
+
+.image-summary-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.image-summary-container img {
+  max-width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain; 
+}
+
+.comments-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.4rem 0; 
+  text-align: center;
+}
+
+.comments-list {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+} 
+
+.comment-item {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--third-color);
+  margin-top: 0.4rem;
+}
+
+.add-your-comment-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.4rem 0; 
+  text-align: center;
+  color: var(--font-color);
+}
+
+.new-comment-container {
+  background-color: var(--font-color-secondary);
+  max-width: 400px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 470px) {
+  .image-summary-container {
+    flex-direction: column;
+  }
+
+  .image-summary-container img {
+    max-width: 60%;
+    height: auto;
+    margin: auto;
+  }
+  
+  .summary {
+    max-height: 200px; 
+    overflow: auto; 
+    padding: 0.4rem ;
+  }
 }

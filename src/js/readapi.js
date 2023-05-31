@@ -15,6 +15,7 @@ const readAPI = async () => {
 
   data.forEach((show) => {
     localObject[show.id] = {
+      id: show.id,
       name: show.name,
       status: show.status,
       genre: show.genres,
