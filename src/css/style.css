@@ -47,6 +47,7 @@ h1 {
   text-align: center;
   font-size: 28px;
   font-weight: bold;
+  color: var(--font-color-secondary);
 }
 
 .main-container {
@@ -71,9 +72,31 @@ ul {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.footer {
+.footer,
+.header {
   text-align: center;
   padding: 1rem;
   background-color: var(--secondary-color);
   color: var(--primary-color);
+}
+
+.header img {
+  height: 70px;
+}
+
+button {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 4px;
+  margin: 4px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--font-color);
 }
