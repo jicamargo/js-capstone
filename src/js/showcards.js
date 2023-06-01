@@ -1,6 +1,6 @@
 import filterTopMovies from './filtertopmovies.js';
 import MovieDetailsPopup from './moviedetailspopup.js';
-import { fetchLikes } from './involvementapi.js';
+import fetchLikes from './involvementapi.js';
 
 const showCards = async (mainContainer) => {
   const newSection = document.createElement('section');
@@ -57,8 +57,9 @@ const showCards = async (mainContainer) => {
       ulElement.appendChild(liElement);
     });
   } catch (error) {
-    alert('An error occurred while showing cards:', error);
+    return null;
   }
+  return null;
 };
 
 export default showCards;
