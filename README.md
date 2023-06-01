@@ -21,6 +21,8 @@
 
 - [⭐️ Key Features ](#️key-features)
 
+- [🎥 Video presentation](#video-presentation)
+
 - [🚀 Live Demo](#live-demo)
 
 - [💻 Install and Getting Started ](#-getting-started-)
@@ -103,9 +105,15 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🎥 Video presentation <a name="#video-presentation"></a>
+
+  See the authors presenting the project [here](https://drive.google.com/file/d/1pJmHDmg5d5ffGoOHMXAl5ZfllJf43778/view?usp=drive_link)
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
   You can see it working [here](https://jicamargo.github.io/js-capstone/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## 💻 Install and Getting Started <a name="getting-started"></a>
