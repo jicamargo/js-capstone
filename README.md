@@ -8,7 +8,7 @@
 
   <h1><b>🎬🌟 TOP 10 MOVIES 🌟🎥</b></h1>
   <!-- title image -->
-  <img src="./src/images/logo.png" alt="Top 10 Movies" width="300" height="300">
+  <img src="./src/images/top-movies-logo.png" alt="Top 10 Movies" width="auto" height="300">
 
   
 
