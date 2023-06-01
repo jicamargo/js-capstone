@@ -100,3 +100,7 @@ button {
 button:hover {
   background-color: var(--font-color);
 }
+
+.no-bullets {
+  list-style: none;
+}

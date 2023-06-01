@@ -4,7 +4,7 @@ const addHeader = () => {
   const headerElement = document.querySelector('header');
   headerElement.classList.add('header');
   headerElement.innerHTML = `<img src='${topMoviesLogo}' alt="top movies logo">
-                              <nav class="navlinks">
+                              <nav class="navlinks no-bullets">
                               <li>Home</li>
                               <li>Shows</li>
                               <li>About</li>
