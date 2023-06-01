@@ -13,48 +13,45 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 
-- [🎥 Top 10 Movies ](#-to-do-list-app-)
+- [🎥 Top 10 Movies ](#description)
 
-  - [🛠 Built With ](#-built-with-)
+- [🛠 Built With ](#built-with)
 
-    - [Tech Stack ](#tech-stack-)
+    - [Tech Stack](#tech-stack)
 
-  - [⭐️ Key Features ](#️-key-features-)
+- [⭐️ Key Features ](#️key-features)
 
-  - [🚀 Live Demo](#live-demo)
+- [🚀 Live Demo](#live-demo)
 
-  - [💻 Install and Getting Started ](#-getting-started-)
+- [💻 Install and Getting Started ](#-getting-started-)
 
-    - [Prerequisites](#prerequisites)
+  - [Prerequisites](#prerequisites)
 
-    - [Setup](#setup)
+  - [Setup](#setup)
 
-    - [Usage](#usage)
+  - [Usage](#usage)
 
-    - [Run tests](#run-tests)
+  - [Run tests](#run-tests)
 
-    - [Deployment](#deployment)
+  - [Deployment](#deployment)
 
-  - [👥 Authors ](#-authors-)
+- [👥 Authors ](#-authors-)
 
-  - [🤝 Contributing ](#-contributing-)
+- [🤝 Contributing ](#-contributing-)
 
-  - [⭐️ Show your support ](#️-show-your-support-)
+- [⭐️ Show your support ](#️-show-your-support-)
 
-  - [🙏 Acknowledgments ](#-acknowledgments-)
+- [🙏 Acknowledgments ](#-acknowledgments-)
 
-  - [📝 License ](#-license-)
+- [📝 License ](#-license-)
 
-    - [This project is MIT licensed.](#this-project-is-mit-licensed)
-
-  
-  
+  - [This project is MIT licensed.](#this-project-is-mit-licensed)
 
 <!-- PROJECT DESCRIPTION -->
 
   
 
-# 🎬🌟 Top 10 Movies 🌟🎥<a name="about-project"></a>
+# 🎬🌟 Top 10 Movies 🌟🎥<a name="description"></a>
 
   
 
@@ -62,7 +59,7 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
   
 
-## 🛠 Built and implememnted With <a name="built-with"></a>
+## 🛠 Built and implemented with <a name="built-with"></a>
 
 - Javascript
 - HTML
@@ -104,6 +101,7 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 <!-- GETTING STARTED -->
 ## 💻 Install and Getting Started <a name="getting-started"></a>
 
@@ -113,25 +111,19 @@ You can follow the next steps to review the code or to run the project locally:
 
 2. cd your-repo
 
-3. ```
-npm install
-```
+3. Execute `npm install` to install the dependencies
 
-4. ```
-npm run build
-```
+4. Execute `npm run build` to build the project
 
-5. ```
-npm start
-```
+5. Execute `npm start` to run the project
 
 ### Prerequisites
 
   In order to run this project you need:
 
-  -A modern browser for like Mozilla, Chrome, Edge, etc. that supports HTML5 and CSS
+  - A modern browser for like Mozilla, Chrome, Edge, etc. that supports HTML5 and CSS
 
-  -A code editor like VSCode, Atom, SublimeText, etc.
+  - A code editor like VSCode, Atom, SublimeText, etc.
 
 ### Setup
 
