@@ -77,17 +77,17 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 <details>
   <summary>Front End</summary>
   <ul>
-    <li>- HTML</li>
-    <li>- JAVASCRIPT</li>
-    <li>- CSS</li>
+    <li>HTML</li>
+    <li>JAVASCRIPT</li>
+    <li>CSS</li>
   </ul>
 </details>
 
 <details>
   <summary>Back End</summary>
   <ul>
-    <li>- TV MAZE API to extract the Movies info</li>
-    <li>- Involvement API to save comments and likes</li>
+    <li>TV MAZE API to extract the Movies info</li>
+    <li>Involvement API to save comments and likes</li>
   </ul>
 </details>
 
@@ -184,11 +184,12 @@ You can follow the next steps to review the code or to run the project locally:
  
 We welcome contributions to improve and expand the Top 10 Movies application. If you have any ideas, bug fixes, or new features to propose, please submit a pull request. Make sure to follow the project's guidelines and maintain code quality.
 
-Feel free to check the [issues page](../../issues/).
+
+  - Feel free to check the [issues page](../../issues/).
+  - create your issue [here](../../issues/new)
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-  
 
 <!-- SUPPORT -->
 
