@@ -12,8 +12,8 @@ const getComments = (movieId) => new Promise((resolve, reject) => {
         resolve([]);
       }
     })
-    .catch((error) => {
-      reject(error);
+    .catch(() => {
+      reject();
     });
 });
 

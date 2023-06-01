@@ -13,16 +13,19 @@ body.popup-open {
 }
 
 .popup {
+  --secondary-color-transparency: rgba(247, 86, 124, 0.126);
+
+  font-family: var(--font-family-titles);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--primary-color);
-  padding: 18px;
+  padding: 0 18px 18px 18px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  max-width: 600px;
+  max-width: 500px;
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
@@ -37,6 +40,7 @@ body.popup-open {
   border-radius: 8px;
   position: sticky;
   top: 0;
+  margin-top: 20px;
 }
 
 .title-container h2 {
@@ -107,6 +111,12 @@ body.popup-open {
   margin: 0.4rem 0;
 }
 
+.other-details-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
 /* CSS styles for the summary */
 .summary {
   text-align: justify;
@@ -130,21 +140,28 @@ body.popup-open {
   display: block;
   padding: 0;
   margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  max-height: 100px;
+  overflow-y: auto;
 }
 
 .comment-item {
-  font-size: 0.8rem;
-  font-style: italic;
-  color: var(--third-color);
-  margin-top: 0.4rem;
+  display: flex;
+  justify-content: flex-start;
+  padding: 4px;
+  gap: 8px;
 }
 
-.add-your-comment-title {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin: 0.4rem 0;
-  text-align: center;
-  color: var(--font-color);
+.comment-item > span {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--third-color);
+}
+
+.comment-item:nth-child(odd) {
+  background-color: var(--secondary-color-transparency);
 }
 
 .new-comment-container {
@@ -155,7 +172,38 @@ body.popup-open {
   flex-direction: column;
   gap: 10px;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
+  border-radius: 8px;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.comment-input {
+  padding: 5px;
+  font-size: 12px;
+  font-family: var(--font-family-titles);
+}
+
+.new-comment-container > button {
+  width: 50%;
+  margin: auto;
+  padding: 7px;
+  margin-bottom: 12px;
+}
+
+.add-your-comment-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.4rem 0;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.span-error {
+  color: var(--font-color);
+  padding: 10px;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
 }
 
 @media screen and (max-width: 470px) {
