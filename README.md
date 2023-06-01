@@ -105,7 +105,7 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-  You can see it working [here](https://jicamargo.github.io/js-capstone/)
+  You can see it working [here](https://jicamargo.github.io/js-capstone/dist/)
 
 <!-- GETTING STARTED -->
 ## 💻 Install and Getting Started <a name="getting-started"></a>
@@ -144,7 +144,7 @@ You can follow the next steps to review the code or to run the project locally:
 
 ### Deployment
 
-  This project is deployed in github pages, you can see it [here](https://jicamargo.github.io/js-capstone/)
+  This project is deployed in github pages, you can see it [here](https://jicamargo.github.io/js-capstone/dist/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
