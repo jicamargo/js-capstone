@@ -17,7 +17,7 @@
 
 - [🛠 Built With ](#built-with)
 
-    - [Tech Stack](#tech-stack)
+  - [Tech Stack](#tech-stack)
 
 - [⭐️ Key Features ](#️key-features)
 
@@ -51,7 +51,7 @@
 
   
 
-# 🎬🌟 Top 10 Movies 🌟🎥<a name="description"></a>
+## 🎬🌟 Top 10 Movies 🌟🎥<a name="description"></a>
 
   
 
@@ -75,21 +75,23 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 - Projects board for organization
   
 <details>
-
   <summary>Front End</summary>
   <ul>
     <li>- HTML</li>
     <li>- JAVASCRIPT</li>
     <li>- CSS</li>
   </ul>
+</details>
 
+<details>
   <summary>Back End</summary>
   <ul>
     <li>- TV MAZE API to extract the Movies info</li>
     <li>- Involvement API to save comments and likes</li>
   </ul>
-
 </details>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Key Features <a name="key-features"></a>
 
@@ -101,6 +103,9 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+  You can see it working [here](https://jicamargo.github.io/js-capstone/)
 
 <!-- GETTING STARTED -->
 ## 💻 Install and Getting Started <a name="getting-started"></a>
@@ -137,42 +142,40 @@ You can follow the next steps to review the code or to run the project locally:
 
   run `npm test` in your terminal.
 
-### Deployment adn live demo
+### Deployment
 
   This project is deployed in github pages, you can see it [here](https://jicamargo.github.io/js-capstone/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-  
-
+ 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
 
--👤 **Fortune**
+### 👤 **Fortune**
 
-- GitHub: [@Braingenius2](https://github.com/Braingenius2)
+  - GitHub: [@Braingenius2](https://github.com/Braingenius2)
 
-- Twitter: [@fortune](https://twitter.com/fortune)
+  - Twitter: [@fortune](https://twitter.com/fortune)
 
-- LinkedIn: [LinkedIn](https://linkedin.com/in/fortune)
+  - LinkedIn: [LinkedIn](https://linkedin.com/in/fortune)
 
 
 
--👤 **Jorge Camargo**  
+### 👤 **Jorge Camargo**  
 
-- GitHub: [@jicamargo](https://github.com/jicamargo)
+  - GitHub: [@jicamargo](https://github.com/jicamargo)
 
-- Twitter: [@ji_camargo](https://twitter.com/ji_camargo)
+  - Twitter: [@ji_camargo](https://twitter.com/ji_camargo)
 
-- LinkedIn: [LinkedIn](https://linkedin.com/in/jorgecamargog)
+  - LinkedIn: [LinkedIn](https://linkedin.com/in/jorgecamargog)
+
+  _Feel free to reach out to us if you have any questions or collaboration opportunities!_
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-  
-  
 
 <!-- CONTRIBUTING -->
 
