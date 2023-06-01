@@ -2,21 +2,9 @@
 
 <div align="center">
 
-  <br/>
-
-  
-
-  <h1><b>🎬🌟 TOP 10 MOVIES 🌟🎥</b></h1>
-  <!-- title image -->
-  <img src="./src/images/top-movies-logo.png" alt="Top 10 Movies" width="auto" height="300">
-
-  
-
-  <br/>
+  <img src="./src/images/top-movies-logo.png" alt="Top 10 Movies" width="auto" height="250">
 
 </div>
-
-  
 
 <!-- TABLE OF CONTENTS -->
 
