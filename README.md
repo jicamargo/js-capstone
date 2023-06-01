@@ -105,9 +105,11 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🎥 Video presentation <a name="#video-presentation"></a>
+## 🎥 Video presentation <a name="video-presentation"></a>
 
   See the authors presenting the project [here](https://drive.google.com/file/d/1pJmHDmg5d5ffGoOHMXAl5ZfllJf43778/view?usp=drive_link)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
