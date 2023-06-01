@@ -185,8 +185,8 @@ You can follow the next steps to review the code or to run the project locally:
 We welcome contributions to improve and expand the Top 10 Movies application. If you have any ideas, bug fixes, or new features to propose, please submit a pull request. Make sure to follow the project's guidelines and maintain code quality.
 
 
-  - Feel free to check the [issues page](../issues/).
-  - create your issue [here](../issues/new)
+  - Feel free to check the [issues page](../../issues/).
+  - Create a new issue [here](../../issues/new)
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
