@@ -8,6 +8,7 @@ const showCards = async (mainContainer) => {
 
   try {
     const top10Movies = await filterTopMovies();
+    const appId = 'lwgScw6o5MEbQLNCvzXw';
 
     // Fetch likes from the involvement API
     const likesData = await fetchLikes(appId);
@@ -56,7 +57,7 @@ const showCards = async (mainContainer) => {
       ulElement.appendChild(liElement);
     });
   } catch (error) {
-    // console.error('An error occurred while showing cards:', error);
+    alert('An error occurred while showing cards:', error);
   }
 };
 
