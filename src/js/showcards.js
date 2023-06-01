@@ -1,5 +1,6 @@
 import filterTopMovies from './filtertopmovies.js';
 import MovieDetailsPopup from './moviedetailspopup.js';
+import { fetchLikes } from './involvementapi.js';
 
 const showCards = async (mainContainer) => {
   const newSection = document.createElement('section');
@@ -7,6 +8,9 @@ const showCards = async (mainContainer) => {
 
   try {
     const top10Movies = await filterTopMovies();
+
+    // Fetch likes from the involvement API
+    const likesData = await fetchLikes(appId);
 
     newSection.classList.add('movies-section');
     newSection.innerHTML = `
@@ -28,8 +32,12 @@ const showCards = async (mainContainer) => {
       const nameElement = document.createElement('h3');
       nameElement.textContent = movie.name;
 
+      // Find the likes for this movie
+      const movieLikesData = likesData.find((like) => like.item_id === movie.id.toString());
+      const movieLikes = movieLikesData ? movieLikesData.likes : 0;
+
       const ratingElement = document.createElement('p');
-      ratingElement.textContent = `Rating: ${movie.rating}`;
+      ratingElement.textContent = `Rating: ${movie.rating} | Likes: ${movieLikes}`;
 
       const commentsButton = document.createElement('button');
       commentsButton.classList.add('comments-btn');
