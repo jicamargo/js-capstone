@@ -7,6 +7,8 @@
   
 
   <h1><b>🎬🌟 TOP 10 MOVIES 🌟🎥</b></h1>
+  <!-- title image -->
+  <img src="./src/images/logo.png" alt="Top 10 Movies" width="300" height="300">
 
   
 
@@ -20,7 +22,6 @@
 
 # 📗 Table of Contents
 
-  
 
 - [📗 Table of Contents](#-table-of-contents)
 
@@ -34,13 +35,11 @@
 
   - [🚀 Live Demo](#live-demo)
 
-  - [💻 Getting Started ](#-getting-started-)
+  - [💻 Install and Getting Started ](#-getting-started-)
 
     - [Prerequisites](#prerequisites)
 
     - [Setup](#setup)
-
-    - [Install](#install)
 
     - [Usage](#usage)
 
@@ -48,7 +47,7 @@
 
     - [Deployment](#deployment)
 
-    - [👥 Authors ](#-authors-)
+  - [👥 Authors ](#-authors-)
 
   - [🤝 Contributing ](#-contributing-)
 
@@ -75,49 +74,39 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
   
 
-## 🛠 Built With <a name="built-with"></a>
-
-- Webpack
-
-- HTML
-
-- CSS
+## 🛠 Built and implememnted With <a name="built-with"></a>
 
 - Javascript
-
-- API
-
-- GIT FLow
-
-  
+- HTML
+- CSS
 
 ### Tech Stack <a name="tech-stack"></a>
 
+- Webpack
+- API
+- Linters checkers (JS, CSS, lighthouse, webhint)
+- Jest testing
+- GIT FLow
+- Projects board for organization
   
-
 <details>
 
-  <summary>Client</summary>
-
+  <summary>Front End</summary>
   <ul>
+    <li>- HTML</li>
+    <li>- JAVASCRIPT</li>
+    <li>- CSS</li>
+  </ul>
 
-    <li>HTML</li>
-
-    <li>JAVASCRIPT</li>
-
-    <li>CSS</li>
-
-    <li>WEBPACK</li>
-
+  <summary>Back End</summary>
+  <ul>
+    <li>- TV MAZE API to extract the Movies info</li>
+    <li>- Involvement API to save comments and likes</li>
   </ul>
 
 </details>
 
-  
-
 ## ⭐️ Key Features <a name="key-features"></a>
-
-  
 
 - **Browse the Top 10:** Get ready to dive into a hand-picked selection of the greatest movies ever made. Explore the list and discover cinematic masterpieces across various genres and eras.
   
@@ -125,33 +114,28 @@ Welcome to Top 10 Movies! This application allows users to explore a curated lis
 
 - **User-Friendly Interface:** The application offers a clean and intuitive user interface, ensuring a seamless browsing experience. Easily navigate through the top movies, view details, and interact with the community.
 
-  
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
- 
-
 <!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-  
+## 💻 Install and Getting Started <a name="getting-started"></a>
 
 You can follow the next steps to review the code or to run the project locally:
-
-  
 
 1. clone this repo (`git clone https://github.com/jicamargo/js-capstone.git`)
 
 2. cd your-repo
 
-3. npm install
+3. ```
+npm install
+```
 
-4. npm run build
+4. ```
+npm run build
+```
 
-5. npm start
-
-  
+5. ```
+npm start
+```
 
 ### Prerequisites
 
@@ -161,38 +145,22 @@ You can follow the next steps to review the code or to run the project locally:
 
   -A code editor like VSCode, Atom, SublimeText, etc.
 
-  
-
 ### Setup
 
   Follow the steps above to setup this project in your local environment
 
-  
-
-### Install
-
-  Install this project with:
-
-  This application runs directly (it does not need any install process)
-
-  
-
 ### Usage
 
-  Enter to index.html created in ./dist folder
-
+  Enter to index.html created in ./dist folder or run: npm start in your terminal
   
 ### Run tests
 
-  No tests needed, you can enter directly to index.html
+  run `npm test` in your terminal.
 
-  
+### Deployment adn live demo
 
-### Deployment
+  This project is deployed in github pages, you can see it [here](https://jicamargo.github.io/js-capstone/)
 
-  No deployment needed, you can enter directly to index.html in dist folder
-
-  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,7 +168,7 @@ You can follow the next steps to review the code or to run the project locally:
 
 <!-- AUTHORS -->
 
-### 👥 Authors <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 
 -👤 **Fortune**
@@ -270,10 +238,8 @@ If you like this project, please give a ⭐️ (Thank you)
 
 ## 📝 License <a name="license"></a>
 
-  
 
 ### This project is [MIT](./LICENSE) licensed.
-
   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
