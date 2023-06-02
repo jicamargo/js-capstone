@@ -1,5 +1,4 @@
 const saveComments = (comment) => {
-
   const API_APP_ID = 'lwgScw6o5MEbQLNCvzXw'; // Variable to store the API App ID
   const URL_API = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${API_APP_ID}/`;
   const url = `${URL_API}comments`;
