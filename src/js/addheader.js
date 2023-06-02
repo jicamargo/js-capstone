@@ -6,9 +6,9 @@ const addHeader = () => {
   headerElement.innerHTML = `<img class="main-logo" src='${topMoviesLogo}' alt="top movies logo">
                               <div class="header-title">
                                 <nav class="navlinks no-bullets">
-                                  <li>Home</li>
-                                  <li>Shows</li>
-                                  <li>About</li>
+                                  <li class ="home">Home</li>
+                                  <li class="shows">Shows(<span class=total></span>)</li>
+                                  <li class="about">About</li>
                                 </nav>
                               </div>`;
 };
