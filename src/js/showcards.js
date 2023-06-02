@@ -2,6 +2,7 @@ import filterTopMovies from './filtertopmovies.js';
 import MovieDetailsPopup from './moviedetailspopup.js';
 import fetchLikes from './fetchlikes.js';
 import updateLikes from './updatelikes.js';
+import countElements from './countelements.js';
 
 const showCards = async (mainContainer) => {
   const newSection = document.createElement('section');
@@ -9,15 +10,17 @@ const showCards = async (mainContainer) => {
 
   try {
     const top10Movies = await filterTopMovies();
+    const totalMovies = countElements(top10Movies);
+    // update the DOM span element with id=totalMovies with the total of movies
+    document.getElementById('totalMovies').innerHTML = totalMovies;
+
     const appId = 'lwgScw6o5MEbQLNCvzXw';
 
     // Fetch likes from the involvement API
     const likesData = await fetchLikes(appId);
 
     newSection.classList.add('movies-section');
-    newSection.innerHTML = `
-      <h2>Movies</h2>
-    `;
+    newSection.innerHTML = '';
     mainContainer.appendChild(newSection);
 
     ulElement.classList.add('ul-cards');
@@ -52,16 +55,13 @@ const showCards = async (mainContainer) => {
       `;
 
       // Add an event listener to the heart icon to update likes when clicked
-      likesElement.querySelector('.like-button').addEventListener('click', async () => {
-        try {
-          await updateLikes(appId, movie.id.toString());
-          const updatedLikesData = await fetchLikes(appId);
-          const newLikes = updatedLikesData.find((like) => like.item_id === movie.id.toString());
-          const updatedMovieLikes = newLikes ? newLikes.likes : 0;
-          likesElement.querySelector('.likes-count').textContent = updatedMovieLikes;
-        } catch (error) {
-          console.error('An error occurred while updating likes:', error);
-        }
+      likesElement.querySelector('.like-button').addEventListener('click', () => {
+        updateLikes(appId, movie.id.toString())
+          .then(() => {
+          // increase 1 like in the DOM
+            const likesCount = likesElement.querySelector('.likes-count');
+            likesCount.textContent = parseInt(likesCount.textContent, 10) + 1;
+          });
       });
 
       const commentsButton = document.createElement('button');
