@@ -68,15 +68,10 @@ const showCards = async (mainContainer) => {
       commentsButton.classList.add('comments-btn');
       commentsButton.textContent = 'Comments';
 
-      const reservationsButton = document.createElement('button');
-      reservationsButton.classList.add('reservations-btn');
-      reservationsButton.textContent = 'Reservations';
-
       liElement.appendChild(imageElement);
       liElement.appendChild(nameElement);
       liElement.appendChild(ratingLikesContainer);
       liElement.appendChild(commentsButton);
-      liElement.appendChild(reservationsButton);
 
       ulElement.appendChild(liElement);
       // Append the rating and likes elements to the ratingLikesContainer
