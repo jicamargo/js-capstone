@@ -129,7 +129,7 @@ button:hover {
 
 .navlinks {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   list-style: none;
   gap: 4rem;
