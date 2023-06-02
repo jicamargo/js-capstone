@@ -32,6 +32,11 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.js$/, // File type to match (e.g., JavaScript files)
+        exclude: /node_modules/, // Exclude any folders from processing (optional)
+        use: 'babel-loader', // The loader to use
+      },
     ],
   },
 };
