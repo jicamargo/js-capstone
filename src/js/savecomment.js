@@ -1,11 +1,4 @@
 const saveComments = (comment) => {
-  // the parameter comment is an object with the following structure:
-  // {
-  //   item_id: movie.id,
-  //   username: yourname.value,
-  //   comment: yourInsights.value,
-  // }
-  // the function saveComments should send this object to the API
 
   const API_APP_ID = 'lwgScw6o5MEbQLNCvzXw'; // Variable to store the API App ID
   const URL_API = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${API_APP_ID}/`;
