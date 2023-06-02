@@ -67,6 +67,7 @@ const showCards = async (mainContainer) => {
       const commentsButton = document.createElement('button');
       commentsButton.classList.add('comments-btn');
       commentsButton.textContent = 'Comments';
+      commentsButton.addEventListener('click', () => { MovieDetailsPopup(movie); });
 
       liElement.appendChild(imageElement);
       liElement.appendChild(nameElement);
