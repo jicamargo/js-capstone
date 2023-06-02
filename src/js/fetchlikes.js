@@ -1,4 +1,3 @@
-// involvementAPI.js
 const involvementAPIBaseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 
 const fetchLikes = async (appId) => {
