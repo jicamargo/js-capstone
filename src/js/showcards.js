@@ -11,8 +11,9 @@ const showCards = async (mainContainer) => {
   try {
     const top10Movies = await filterTopMovies();
     const totalMovies = countElements(top10Movies);
-    // update the DOM span element with id=totalMovies with the total of movies
+    // update the DOM span element with id=totalMovie with the total of movies
     document.getElementById('totalMovies').innerHTML = totalMovies;
+    document.querySelector('.total').innerHTML = totalMovies;
 
     const appId = 'lwgScw6o5MEbQLNCvzXw';
 
