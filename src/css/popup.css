@@ -1,3 +1,7 @@
+body.popup-open {
+  overflow: hidden;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -9,48 +13,213 @@
 }
 
 .popup {
+  --secondary-color-transparency: rgba(247, 86, 124, 0.126);
+
+  font-family: var(--font-family-titles);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--primary-color);
-  padding: 20px;
+  padding: 0 18px 18px 18px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 9999;
-  max-width: 400px;
+  max-width: 500px;
   width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
-.popup h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  margin-top: 20px;
 }
 
-.popup img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.popup p {
-  margin-bottom: 10px;
+.title-container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+  color: var(--background-color);
 }
 
 /* CSS styles for the close button */
 .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  right: 20px;
   width: 30px;
   height: 30px;
+  color: var(--font-color);
   font-size: 20px;
+  font-weight: bold;
   background-color: transparent;
   border: none;
-  color: var(--font-color);
   cursor: pointer;
 }
 
 .close-button:hover {
   color: #f00;
+}
+
+.popup p {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.image-summary-container {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.image-summary-container img {
+  max-width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+}
+
+/* CSS styles for the genres list */
+.genres-list {
+  display: flex;
+  list-style: none;
+  margin: 0.4rem 0;
+  padding: 0;
+}
+
+.genres-list li {
+  margin-right: 6px;
+  padding: 4px 10px;
+  background-color: var(--secondary-color);
+  border-radius: 14px;
+  color: var(--third-color);
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+/* CSS styles for the details container */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.4rem 0;
+}
+
+.other-details-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+/* CSS styles for the summary */
+.summary {
+  text-align: justify;
+  max-height: 300px;
+  overflow: auto;
+  padding: 0.2rem 0.4rem;
+  border-top: 2px solid var(--font-color-secondary);
+  border-bottom: 2px solid var(--font-color-secondary);
+  font-size: 1rem;
+}
+
+.comments-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.4rem 0;
+  text-align: center;
+}
+
+.comments-list {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.comment-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 4px;
+  gap: 8px;
+}
+
+.comment-item > span {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--third-color);
+}
+
+.comment-item:nth-child(odd) {
+  background-color: var(--secondary-color-transparency);
+}
+
+.new-comment-container {
+  background-color: var(--font-color-secondary);
+  max-width: 400px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  margin-top: 1.4rem;
+  border-radius: 8px;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.comment-input {
+  padding: 5px;
+  font-size: 12px;
+  font-family: var(--font-family-titles);
+}
+
+.new-comment-container > button {
+  width: 50%;
+  margin: auto;
+  padding: 7px;
+  margin-bottom: 12px;
+}
+
+.add-your-comment-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.4rem 0;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.span-error {
+  color: var(--font-color);
+  padding: 10px;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+@media screen and (max-width: 470px) {
+  .image-summary-container {
+    flex-direction: column;
+  }
+
+  .image-summary-container img {
+    max-width: 60%;
+    height: auto;
+    margin: auto;
+  }
+
+  .summary {
+    max-height: 200px;
+    overflow: auto;
+    padding: 0.4rem;
+  }
 }
