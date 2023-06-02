@@ -56,12 +56,12 @@ const showCards = async (mainContainer) => {
         try {
           await updateLikes(appId, movie.id.toString());
           const updatedLikesData = await fetchLikes(appId);
-          const updatedMovieLikesData = updatedLikesData.find((like) => like.item_id === movie.id.toString());
-          const updatedMovieLikes = updatedMovieLikesData ? updatedMovieLikesData.likes : 0;
+          const newLikes = updatedLikesData.find((like) => like.item_id === movie.id.toString());
+          const updatedMovieLikes = newLikes ? newLikes.likes : 0;
           likesElement.querySelector('.likes-count').textContent = updatedMovieLikes;
         } catch (error) {
-            console.error('An error occurred while updating likes:', error);
-          }
+          console.error('An error occurred while updating likes:', error);
+        }
       });
 
       const commentsButton = document.createElement('button');
