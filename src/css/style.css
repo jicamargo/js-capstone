@@ -104,3 +104,20 @@ button:hover {
 .no-bullets {
   list-style: none;
 }
+
+.rating-likes-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.likes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
