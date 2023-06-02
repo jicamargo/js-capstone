@@ -168,9 +168,9 @@ You can follow the next steps to review the code or to run the project locally:
 
   - GitHub: [@Braingenius2](https://github.com/Braingenius2)
 
-  - Twitter: [@fortune](https://twitter.com/fortune)
+  - Twitter: [@fortune](https://twitter.com/braingenius2)
 
-  - LinkedIn: [LinkedIn](https://linkedin.com/in/fortune)
+  - LinkedIn: [LinkedIn](https://www.linkedin.com/in/fortune-uzodinma-8943b2136/)
 
 
 
