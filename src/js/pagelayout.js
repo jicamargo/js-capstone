@@ -1,12 +1,15 @@
 import showCards from './showcards.js';
 import addFooter from './addfooter.js';
 import addHeader from './addheader.js';
+import addOptionButtons from './addoptionsbuttons.js';
+
 
 const pageLayout = () => {
   const mainContainer = document.querySelector('.main-container');
 
   addHeader();
-  showCards(mainContainer);
+  addOptionButtons();
+  showCards(mainContainer, 5);
   addFooter();
 };
 
