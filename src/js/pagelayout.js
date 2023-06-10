@@ -4,7 +4,7 @@ import addHeader from './addheader.js';
 import addOptionButtons from './addoptionsbuttons.js';
 
 const pageLayout = () => {
-  const mainContainer = document.querySelector('.main-container');
+  const mainContainer = document.getElementById('main-container');
 
   addHeader();
   addOptionButtons();

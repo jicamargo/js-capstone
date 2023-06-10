@@ -5,6 +5,9 @@ import updateLikes from './updatelikes.js';
 import countElements from './countelements.js';
 
 const showCards = async (mainContainer, showMovies) => {
+  document.getElementById('uxMessage').textContent = 'Loading...';
+  document.getElementById('topMoviesTitle').style.display = 'none';
+
   // if there is a previous section, deleite it
   const previousSection = document.querySelector('.movies-section');
   if (previousSection) {
@@ -15,23 +18,19 @@ const showCards = async (mainContainer, showMovies) => {
   const ulElement = document.createElement('ul');
 
   const appId = 'lwgScw6o5MEbQLNCvzXw';
-    
+
+  let likesData = [];
   // Fetch likes from the involvement API
   try {
-    const likesData = await fetchLikes(appId);
-    console.log(likesData);
+    likesData = await fetchLikes(appId);
   } catch (error) {
-    const likesData = [];
-    console.log(error);
+    likesData = [];
   }
 
-
   try {
-    document.getElementById('topMoviesTitle').style.display = 'none';
-    document.getElementById('uxMessage').textContent = 'Loading...';
-
     const top10Movies = await filterTopMovies(showMovies);
     const totalMovies = countElements(top10Movies);
+
     // update the DOM span element with id=totalMovie with the total of movies
     document.getElementById('totalMovies').innerHTML = totalMovies;
     document.querySelector('.total').innerHTML = totalMovies;
@@ -95,13 +94,14 @@ const showCards = async (mainContainer, showMovies) => {
       // Append the rating and likes elements to the ratingLikesContainer
       ratingLikesContainer.appendChild(ratingElement);
       ratingLikesContainer.appendChild(likesElement);
-
-      document.getElementById('topMoviesTitle').style.display = 'block';
-      document.getElementById('uxMessage').textContent = '';
     });
   } catch (error) {
     return null;
   }
+
+  document.getElementById('topMoviesTitle').style.display = 'block';
+  document.getElementById('uxMessage').textContent = '';
+
   return null;
 };
 

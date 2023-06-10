@@ -30,7 +30,7 @@ function assignClickEventToOptions(callback) {
 }
 
 function handleOptionButtonClick(number) {
-  const mainContainer = document.querySelector('.main-container');
+  const mainContainer = document.getElementById('main-container');
 
   let showMovies;
 
