@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+:root {
+  --white: #fff;
+  --light: #f0eff3;
+  --black: #000;
+  --dark-blue: #1f2029;
+  --dark-light: #353746;
+  --red: #da2c4d;
+  --yellow: #f8ab37;
+  --grey: #ecedf3;
+}
+
+body {
+  width: 100%;
+  background: var(--dark-blue);
+  overflow-x: hidden;
+  font-family: 'Poppins', 'unicons', sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+::selection {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.z-bigger {
+  z-index: 100 !important;
+}
+
+.background-color {
+  background-color: var(--dark-blue);
+  z-index: 1;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+.checkbox:checked ~ .background-color {
+  background-color: var(--white);
+}
+
+[type="radio"]:checked,
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked),
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+/* dark-clear mode button  */
+
+/*** create the line "when the circle moves" ***/
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+  position: relative;
+  width: 70px;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  margin: 17px 0;
+  margin-top: 20px;
+  height: 6px;
+  border-radius: 4px;
+  background-image: linear-gradient(298deg, var(--font-color), var(--dark-blue), var(--font-color));
+  z-index: 100 !important;
+}
+
+/*** create the circle buttons ***/
+.checkbox:checked + label::before,
+.checkbox:not(:checked) + label::before {
+  position: absolute;
+  cursor: pointer;
+  top: -17px;
+  z-index: 2;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+/* light mode */
+.checkbox:not(:checked) + label::before {
+  content: '\eac1';
+  left: 0;
+  color: var(--grey);
+  background-color: var(--dark-blue);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(26, 53, 71, 0.07);
+}
+
+/* dark mode */
+.checkbox:checked + label::before {
+  content: '\eb8f';
+  left: 30px;
+  color: var(--yellow);
+  background-color: var(--dark-light);
+  box-shadow: 4px 4px 4px rgba(26, 53, 71, 0.25), 0 0 0 1px rgba(26, 53, 71, 0.07);
+}
+
+/******  option buttons ******/
+.optionButtons {
+  position: relative;
+}
+
+.checkbox-budget:checked + label,
+.checkbox-budget:not(:checked) + label {
+  position: relative;
+  display: inline-block;
+  padding: 12px 0;
+  width: 160px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin: 10px auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  -webkit-text-stroke: 0.4px var(--white);
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-budget:checked + label {
+  -webkit-text-stroke: 1px var(--dark-blue);
+  -webkit-text-fill-color: var(--dark-blue);
+  color: var(--dark-blue);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* style when button is not pressed */
+.checkbox-budget:not(:checked) + label {
+  background-color: var(--dark-light);
+}
+
+.checkbox-budget:not(:checked) + label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}
+
+.checkbox-budget:checked + label::before,
+.checkbox-budget:not(:checked) + label::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-image: linear-gradient(180deg, var(--dark-blue), var(--font-color-secondary), var(--font-color), var(--font-color-secondary), var(--dark-light));
+  z-index: -1;
+}

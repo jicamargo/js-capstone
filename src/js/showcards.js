@@ -4,23 +4,38 @@ import fetchLikes from './fetchlikes.js';
 import updateLikes from './updatelikes.js';
 import countElements from './countelements.js';
 
-const showCards = async (mainContainer) => {
+const showCards = async (mainContainer, showMovies) => {
+  document.getElementById('uxMessage').textContent = 'Loading...';
+  document.getElementById('topMoviesTitle').style.display = 'none';
+
+  // if there is a previous section, deleite it
+  const previousSection = document.querySelector('.movies-section');
+  if (previousSection) {
+    previousSection.remove();
+  }
+
   const newSection = document.createElement('section');
   const ulElement = document.createElement('ul');
 
+  const appId = 'lwgScw6o5MEbQLNCvzXw';
+
+  let likesData = [];
+  // Fetch likes from the involvement API
   try {
-    const top10Movies = await filterTopMovies();
+    likesData = await fetchLikes(appId);
+  } catch (error) {
+    likesData = [];
+  }
+
+  try {
+    const top10Movies = await filterTopMovies(showMovies);
     const totalMovies = countElements(top10Movies);
+
     // update the DOM span element with id=totalMovie with the total of movies
     document.getElementById('totalMovies').innerHTML = totalMovies;
     document.querySelector('.total').innerHTML = totalMovies;
 
-    const appId = 'lwgScw6o5MEbQLNCvzXw';
-
-    // Fetch likes from the involvement API
-    const likesData = await fetchLikes(appId);
-
-    newSection.classList.add('movies-section');
+    newSection.classList.add('movies-section', 'background-color');
     newSection.innerHTML = '';
     mainContainer.appendChild(newSection);
 
@@ -83,6 +98,10 @@ const showCards = async (mainContainer) => {
   } catch (error) {
     return null;
   }
+
+  document.getElementById('topMoviesTitle').style.display = 'block';
+  document.getElementById('uxMessage').textContent = '';
+
   return null;
 };
 
