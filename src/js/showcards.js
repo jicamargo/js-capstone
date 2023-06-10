@@ -12,8 +12,19 @@ const showCards = async (mainContainer, showMovies) => {
   }
 
   const newSection = document.createElement('section');
-
   const ulElement = document.createElement('ul');
+
+  const appId = 'lwgScw6o5MEbQLNCvzXw';
+    
+  // Fetch likes from the involvement API
+  try {
+    const likesData = await fetchLikes(appId);
+    console.log(likesData);
+  } catch (error) {
+    const likesData = [];
+    console.log(error);
+  }
+
 
   try {
     document.getElementById('topMoviesTitle').style.display = 'none';
@@ -24,11 +35,6 @@ const showCards = async (mainContainer, showMovies) => {
     // update the DOM span element with id=totalMovie with the total of movies
     document.getElementById('totalMovies').innerHTML = totalMovies;
     document.querySelector('.total').innerHTML = totalMovies;
-
-    const appId = 'lwgScw6o5MEbQLNCvzXw';
-
-    // Fetch likes from the involvement API
-    const likesData = await fetchLikes(appId);
 
     newSection.classList.add('movies-section', 'background-color');
     newSection.innerHTML = '';
