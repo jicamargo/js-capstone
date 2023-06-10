@@ -34,13 +34,11 @@ input {
 body {
   font-size: 16px;
   font-family: var(--font-family-titles);
-  /* background-color: var(--primary-color); */
 }
 
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
 
 h1 {
@@ -50,9 +48,14 @@ h1 {
   color: var(--font-color-secondary);
 }
 
+#topMoviesTitle {
+  padding-top: 16px;
+}
+
 .main-container {
   padding: 1rem;
   margin: auto;
+
   /* background-color: var(--primary-color); */
 }
 

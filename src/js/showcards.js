@@ -9,13 +9,16 @@ const showCards = async (mainContainer, showMovies) => {
   const previousSection = document.querySelector('.movies-section');
   if (previousSection) {
     previousSection.remove();
-  };
-  
+  }
+
   const newSection = document.createElement('section');
-  
+
   const ulElement = document.createElement('ul');
 
   try {
+    document.getElementById('topMoviesTitle').style.display = 'none';
+    document.getElementById('uxMessage').textContent = 'Loading...';
+
     const top10Movies = await filterTopMovies(showMovies);
     const totalMovies = countElements(top10Movies);
     // update the DOM span element with id=totalMovie with the total of movies
@@ -27,7 +30,7 @@ const showCards = async (mainContainer, showMovies) => {
     // Fetch likes from the involvement API
     const likesData = await fetchLikes(appId);
 
-    newSection.classList.add('movies-section','background-color');
+    newSection.classList.add('movies-section', 'background-color');
     newSection.innerHTML = '';
     mainContainer.appendChild(newSection);
 
@@ -86,6 +89,9 @@ const showCards = async (mainContainer, showMovies) => {
       // Append the rating and likes elements to the ratingLikesContainer
       ratingLikesContainer.appendChild(ratingElement);
       ratingLikesContainer.appendChild(likesElement);
+
+      document.getElementById('topMoviesTitle').style.display = 'block';
+      document.getElementById('uxMessage').textContent = '';
     });
   } catch (error) {
     return null;

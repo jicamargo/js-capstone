@@ -3,7 +3,6 @@ import addFooter from './addfooter.js';
 import addHeader from './addheader.js';
 import addOptionButtons from './addoptionsbuttons.js';
 
-
 const pageLayout = () => {
   const mainContainer = document.querySelector('.main-container');
 
