@@ -35,7 +35,12 @@ module.exports = {
       {
         test: /\.js$/, // File type to match (e.g., JavaScript files)
         exclude: /node_modules/, // Exclude any folders from processing (optional)
-        use: 'babel-loader', // The loader to use
+        use: {
+          loader: 'babel-loader', // The loader to use
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },
